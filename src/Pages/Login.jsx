@@ -27,7 +27,6 @@ export default function Login( { authHandler } ) {
     axios.post(url, payload)
       .then(response => {
         // Handle the response data
-        console.log('Response:', response.data);
         authHandler(response.data.token)
       })
       .catch(error => {

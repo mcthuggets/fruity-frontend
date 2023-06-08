@@ -12,7 +12,6 @@ export default function FruitList() {
     useEffect(() => {
         axios.get('https://localhost:7200/api/Fruits')
           .then(response => {
-            console.log(response.data);
             setFruitList(response.data)
           })
           .catch(error => {

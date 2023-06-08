@@ -22,12 +22,7 @@ function App() {
   const onLogIn = (authToken) => {
     setAuthToken(authToken)
     setIsAuth(true)
-  }
-
-  useEffect(() => {
-    console.log('hi from app');
-  }, [authToken])
-  
+    }
 
   return (
     <>
