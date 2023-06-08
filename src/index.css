@@ -186,13 +186,15 @@ label {
   border: 2px black solid;
   padding: 12.5px;
   background-color:	#F0EB8D;
+  color: black;
   font-family: lobster;
 }
 
 .auth-button:hover {
   border: 2px black solid;
   padding: 12.5px;
-  background-color:	#8F43EE;
+  background-color:	black;
+  color: #F0EB8D;
   font-family: lobster;
 }
 
