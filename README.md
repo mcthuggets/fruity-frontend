@@ -7,5 +7,8 @@ To-Do 📝
 
 - Fruits CRUD ✅
 - Surveys CRUD ✅
-- Login/Register pages ⬜
-- Enforce auth on survey pages ⬜
+- Auth ⬜
+  - Log in ✅
+  - Register ⬜
+  - Enforce auth on survey pages ⬜
+ - Download CSV of surveys ⬜
