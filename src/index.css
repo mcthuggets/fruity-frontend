@@ -82,6 +82,22 @@ label {
   background-color: #42855B;
 }
 
+.download-card {
+  border: 2px black solid;
+  margin: 4px;
+  display: flex;
+  background-color: #8F43EE;
+}
+
+.download {
+  background-color: #F0EB8D;
+}
+
+.download:hover {
+  background-color: black;
+  color: #F0EB8D;
+}
+
 
 .card-button-group {
   display: flex;
