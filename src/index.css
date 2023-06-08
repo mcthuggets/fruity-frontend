@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FF67CC;
+  background-color: #2D2727;
 }
 
 code {
@@ -17,22 +17,32 @@ code {
 
 h2 {
   font-family: lobster;
-  text-shadow: 4px 4px 0 #ffceff;
+  color: white;
+  text-shadow: 4px 4px 0 black;
   font-size: 50px;
   text-decoration: underline;
 }
 
 h3 {
   font-family: lobster;
-  text-shadow: 2px 2px 0 white;
+  color: white;
+  text-shadow: 2px 2px 0 black;
   font-size: 25px;
+}
+
+p {
+  color: white;
+}
+
+label {
+  color: #F0EB8D;
 }
 
 .nav {
   border: 2px black solid;
   padding: 4px;
   display: flex;
-  background-color: #ffceff;
+  background-color: #413543;
 }
 
 .survey-h3 {
@@ -53,7 +63,7 @@ h3 {
   border: 2px black solid;
   margin: 4px;
   display: flex;
-  background-color: #ffceff;
+  background-color: #413543;
 }
 
 .card-2 {
@@ -61,7 +71,7 @@ h3 {
   margin: 4px;
   display: flex;
   flex-direction: column;
-  background-color: #a201c3;
+  background-color: #42855B;
   align-items: center;
 }
 
@@ -69,7 +79,7 @@ h3 {
   border: 2px black solid;
   margin: 4px;
   display: flex;
-  background-color: #a201c3;
+  background-color: #42855B;
 }
 
 
@@ -134,7 +144,7 @@ h3 {
   align-items: center;
   padding: 25px;
   margin: 10%;
-  background-color:#a201c3 ;
+  background-color:#8F43EE ;
 }
 
 .box-2 {
@@ -143,7 +153,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two equal-width columns */
   gap: 10px; /* Gap between the columns */
-  background-color:	#ffceff;
+  background-color:	#413543;
 }
 
 .auth-fields {
@@ -159,21 +169,21 @@ h3 {
 .auth-button {
   border: 2px black solid;
   padding: 12.5px;
-  background-color:	#ffc430;
+  background-color:	#F0EB8D;
   font-family: lobster;
 }
 
 .auth-button:hover {
   border: 2px black solid;
   padding: 12.5px;
-  background-color:	#ffceff;
+  background-color:	#8F43EE;
   font-family: lobster;
 }
 
 .survey-form {
   border: 2px black solid;
   padding: 12.5px;
-  background-color:	#ffceff;
+  background-color:	#413543;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -196,7 +206,7 @@ h3 {
 .submit-button {
   border: 2px black solid;
   padding: 12.5px;
-  background-color:	#ffc430;
+  background-color:	#F0EB8D;
   font-family: lobster;
   margin: auto;
 }
@@ -205,6 +215,6 @@ h3 {
   border: 2px black solid;
   padding: 12.5px;
   background-color:	black;
-  color: #ffc430;
+  color: white;
   font-family: lobster;
 }

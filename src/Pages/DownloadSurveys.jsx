@@ -20,7 +20,7 @@ export default function DownloadSurveys() {
   useEffect(() => {
 
     setSurveyUiList(
-      surveyData.map( (survey) => <DisplaySurvey props={survey} />)
+      surveyData.map( (survey, index) => <DisplaySurvey key={index} props={survey} />)
     )
 
   }, [surveyData])

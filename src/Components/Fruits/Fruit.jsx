@@ -47,7 +47,10 @@ export default function Fruit({props}) {
           });
     }
 
-    const titleStyle = { textShadow: `2px 2px 0 ${colour}` }
+    const titleStyle = { 
+                          textShadow: `2px 2px 0 ${colour}`,
+                          color: 'black'
+                        }
 
   return (
     <>

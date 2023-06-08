@@ -23,7 +23,7 @@ export default function FruitList() {
 
       useEffect(() => {
         if (fruitList) {
-          setFruitComponents(fruitList.map(fruit => <Fruit props={fruit} />));
+          setFruitComponents(fruitList.map((fruit, index) => <Fruit key={index} props={fruit} />));
         }
       }, [fruitList]);
 

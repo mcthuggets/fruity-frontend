@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState, useEffect} from "react"
 import  {
         BrowserRouter,
         Routes,
         Route,
         AuthorizeRoute,
-        Link
+        Link,
+        redirect
         } from 'react-router-dom'
 //pages
 import Login from "./Pages/Login";
@@ -13,41 +14,43 @@ import Fruits from "./Pages/Fruits";
 import DownloadSurveys from "./Pages/DownloadSurveys";
 
 function App() {
+
+  const [isAuth, setIsAuth] = useState(true)
+
+  const [authToken, setAuthToken] = useState(null)
+
+  const onLogIn = (authToken) => {
+    setAuthToken(authToken)
+    setIsAuth(true)
+  }
+
+  useEffect(() => {
+    console.log('hi from app');
+  }, [authToken])
+  
+
   return (
     <>
        <BrowserRouter>
 
-            <div className="nav">
-              <button className="auth-button"> Sign in </button>
+           <div className="nav">
+              { isAuth ? <button className="auth-button" onClick={ () => setIsAuth(!isAuth)}> Log out </button> : <Link to="/login" className="auth-button" onClick={ () => setIsAuth(!isAuth)}> Log In </Link> }
               <Link to="/Fruits" className="auth-button"> Fruits </Link>
               <Link to="/Survey" className="auth-button"> Survey </Link>
               <Link to="/DownloadSurveys" className="auth-button"> Download Surveys </Link>
             </div>
 
-            <ul>
-              <li>
-                <Link to="/">Login</Link>
-              </li>
-              <li>
-                <Link to="/Fruits"> Fruits </Link>
-              </li>
-              <li>
-                <Link to="/Survey"> Survey </Link>
-              </li>
-              <li>
-                <Link to="/DownloadSurveys"> Download Surveys </Link>
-              </li>
-            </ul>
-
            <Routes>
-                 <Route exact path='/' element={<Login />}></Route>
+
+
+                 <Route exact path='/login' element={<Login authHandler={ onLogIn }/>}></Route>
                  <Route exact path='/Fruits' element={<Fruits />}></Route>
                  <Route exact path='/Survey' element={<Survey />}></Route>
                  <Route exact path='/DownloadSurveys' element={<DownloadSurveys />}></Route>
           </Routes>
        </BrowserRouter>
     </>
-  );
+  )
 }
 
 export default App;
